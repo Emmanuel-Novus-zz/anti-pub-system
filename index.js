@@ -13,11 +13,11 @@ db.defaults({
 let config = require("./config.json");
 client.config = config;
 
-var now = new Date();
-var hour = now.getHours();
-var minute = now.getMinutes();
-var second = now.getSeconds();
-var times = (`[${hour}:${minute}:${second}]/`);
+let now = new Date();
+let hour = now.getHours();
+let minute = now.getMinutes();
+let second = now.getSeconds();
+let times = (`[${hour}:${minute}:${second}]/`);
 
 client.on('ready', () => {
     console.log(times + `\x1b[33m%s\x1b[0m`, '[WARN]', '\x1b[0m', 'Connexion en cours...');
